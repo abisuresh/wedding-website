@@ -12,15 +12,7 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
-<body>
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
 
-<!-- Add your site or application content here -->
 
 
 <style>
@@ -28,10 +20,8 @@
     body {
 
         color: rgb(170, 150, 250);
-        background-image: url("img/latest.png");
-        background-repeat: repeat;
-        background-color: rgba(92, 1, 178);
-        font-family: "Adobe Garamond Pro";
+        background: rgb(92, 1, 178) url("img/latest.png") repeat;
+        font-family: "Adobe Garamond Pro", Damascus;
         font-size: 25px;
         align-content: center;
         text-align: center;
@@ -57,7 +47,6 @@
         display: none;
         position: absolute;
         background-color: #ebccd1;
-        mini-width: 160px;
 
     }
 
@@ -83,7 +72,7 @@
 
     h1 {
         color: rgb(150, 20, 100);
-        font-family: "Snell Roundhand";
+        font-family: "Snell Roundhand", Chalkduster;
         font-size: 52px;
         align-content: center;
         text-align: center;
@@ -93,7 +82,7 @@
 
     h2 {
         color: rgb(150, 50, 100);
-        font-family: Consolas;
+        font-family: Consolas, "Apple Chancery";
         font-size: 30px;
         align-content: center;
         text-align: center;
@@ -101,7 +90,7 @@
 
     }
 
-    h3 {
+    .tab {
         align-content: center;
         color: rgb(100, 20, 150);
         /*opacity: 0.6;*/
@@ -111,52 +100,60 @@
 
 
 </style>
-<h1>
-    <p> Abbi & Brian </p>
 
-    <img src="FestiveBG.jpg" width="100" style="background-repeat: repeat">
+
+</head>
+<body>
+
+<!-- Add your site or application content here -->
+<h1>
+    Abbi & Brian
+
+
 </h1>
 
 <h2>
-    <p> June 16th, 2018 </p>
+    June 16th, 2018
 </h2>
 
 <h3>
-    <div class="tab">
-        <button class="tablinks" onclick="openPage(event,'Home')">Home</button>
-        <!--<button class="tablinks" onclick="openPage(event, 'About us')">About us</button>-->
-        <button class="tablinks" onclick="openPage(event, 'Photos')">Photos</button>
 
-        <button class="tablinks" onclick="openPage(event, 'Ceremony')">Ceremony</button>
-        <button class="tablinks" onclick="openPage(event, 'Reception')">Reception</button>
-        <button class="tablinks" onclick="openPage(event, 'Travel info')">Travel Info</button>
-        <button class="tablinks" onclick="openPage(event, 'RSVP')">RSVP</button>
-        <button class="tablinks" onclick="openPage(event, 'Registry')">Registry</button>
-        <!--<button class="tablinks" onclick="openPage(event, 'Bridesmaids')">Bridesmaids (and men)</button>-->
-        <!--<button class="tablinks" onclick="openPage(event, 'Groomsmen')">Groomsmen</button>-->
+</h3>
 
-        <div class="dropdown">
-            <button class="dropbtn">Wedding Party</button>
-            <div class="dropdown-content">
-                <button class="tablinks" onclick="openPage(event, 'Bridesmaids')">Bridesmaids (and men)</button>
-                <button class="tablinks" onclick="openPage(event, 'Groomsmen')">Groomsmen</button>
-                <!--<a href="#Bridesmaids (and men)">Bridesmaids and Bridesmen</a>-->
-                <!--<a href="#Groomsmen">Groomsmen</a>-->
-            </div>
+<div class="tab">
+    <button class="tablinks" onclick="openPage(event,'Home')">Home</button>
+    <!--<button class="tablinks" onclick="openPage(event, 'About us')">About us</button>-->
+    <button class="tablinks" onclick="openPage(event, 'Photos')">Photos</button>
+
+    <button class="tablinks" onclick="openPage(event, 'Ceremony')">Ceremony</button>
+    <button class="tablinks" onclick="openPage(event, 'Reception')">Reception</button>
+    <button class="tablinks" onclick="openPage(event, 'Travel info')">Travel Info</button>
+    <button class="tablinks" onclick="openPage(event, 'RSVP')">RSVP</button>
+    <button class="tablinks" onclick="openPage(event, 'Registry')">Registry</button>
+    <!--<button class="tablinks" onclick="openPage(event, 'Bridesmaids')">Bridesmaids (and men)</button>-->
+    <!--<button class="tablinks" onclick="openPage(event, 'Groomsmen')">Groomsmen</button>-->
+
+    <div class="dropdown">
+        <button class="dropbtn">Wedding Party</button>
+        <div class="dropdown-content">
+            <button class="tablinks" onclick="openPage(event, 'Bridesmaids')">Bridesmaids (and men)</button>
+            <button class="tablinks" onclick="openPage(event, 'Groomsmen')">Groomsmen</button>
+            <!--<a href="#Bridesmaids (and men)">Bridesmaids and Bridesmen</a>-->
+            <!--<a href="#Groomsmen">Groomsmen</a>-->
         </div>
+    </div>
 
-        <div class="dropdown">
-            <button class="dropbtn">About us</button>
-            <div class="dropdown-content">
-                <button class="tablinks" onclick="openPage(event, 'About us')">About us</button>
-                <button class="tablinks" onclick="openPage(event, 'Photos')">Photos</button>
-            </div>
-
+    <div class="dropdown">
+        <button class="dropbtn">About us</button>
+        <div class="dropdown-content">
+            <button class="tablinks" onclick="openPage(event, 'About us')">About us</button>
+            <button class="tablinks" onclick="openPage(event, 'Photos')">Photos</button>
         </div>
 
     </div>
 
-</h3>
+</div>
+
 
 <p>
 
@@ -165,8 +162,7 @@
 
 <div id="Home" class="tabcontent">
 
-    <img src="img/holding hands bandi.jpg" width=" 500" style="opacity: 1"
-         style="align-content: center; margin-left: 500px; margin-right: 900px">
+    <img src="img/holding hands bandi.jpg" width=" 500" style="opacity: 1; align-content: center">
 
 </div>
 <div id="About us" class="tabcontent" style="display:none; color: rgb(0, 0, 0); font-size: 18px">
@@ -186,7 +182,6 @@
         and walked out of the restaurant an hour later with smiles on our faces.
         We hugged with a casual see you again sometime soon (which happened to be 3 weeks later at the movies)
         and went our separate ways...</b>
-    </p>
 
 
 </div>
@@ -225,23 +220,22 @@
     <div style='vertical-align:middle; text-align:center'><a
         href='https://www.amazon.com/wedding/abishag-suresh-brian-devins-wells-june-2018/registry/3KR3IUR8E8UVR'
         target="_blank">
-        <img src="img/amazon_logo_RGB.jpg" ; style="width: 20%; height:20%"></a></div>
-    </p>
+        <img src="img/amazon_logo_RGB.jpg" style="width: 20%; height:20%"></a></div>
+
 
     <div style='vertical-align:middle; text-align:center'><a href='https://www.macys.com/wgl/registry/guest/6824087'
                                                              target="_blank">
-        <img src="img/Macys_Logo.jpg" ; style="width:20%; height: 20%"> </a></div>
-    </p>
+        <img src="img/Macys_Logo.jpg" style="width:20%; height: 20%"> </a></div>
+
 
     <div style='vertical-align:middle; text-align:center'><a href='http://www.travelersjoy.com/abbiandbrian/'
                                                              target="_blank">
         Traveler's Joy Registry </a></div>
-    </p>
+
 
     <div style='vertical-align:middle; text-align:center'><a target="_blank"
                                                              href='https://www.bedbathandbeyond.com:443/store/giftregistry/view_registry_guest.jsp?registryId=545034147&eventType=Wedding&pwsurl= '>
-        <img src="img/Bed_Bath_BeyondLogo.jpg" ; style="width:20%; height: 20%"></a></div>
-    </p>
+        <img src="img/Bed_Bath_BeyondLogo.jpg" style="width:20%; height: 20%"></a></div>
 
 
 </div>
@@ -273,23 +267,8 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function (b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function () {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = 'https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X', 'auto');
-    ga('send', 'pageview');
 
+<script>
 
     function openPage(event, pageName) {
         // Variables in tabs code
@@ -314,27 +293,23 @@
 </script>
 
 
-<page>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
 
 
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
+<div style="position:relative;height:0;padding-bottom:56.25%">
+    <iframe src="https://www.youtube.com/embed/eVN4jbXD_6w?ecver=2&autoplay=1"
+            width="100" height="120" frameborder="0" style="position:absolute;width:10%;height:10%" allowfullscreen>
 
+    </iframe>
+</div>
 
-    <div style="position:relative;height:0;padding-bottom:56.25%">
-        <iframe src="https://www.youtube.com/embed/eVN4jbXD_6w?ecver=2&autoplay=1"
-                width="100" height="120" frameborder="0" style="position:absolute;width:10%;height:10%" allowfullscreen>
-
-        </iframe>
-    </div>
-
-</page>
 
 <h3>
 
