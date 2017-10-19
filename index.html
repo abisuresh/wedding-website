@@ -1,81 +1,344 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
-        <!-- Add your site or application content here -->
-       <style>
+<!-- Add your site or application content here -->
 
-           h1 {
-               color: rgb(0,0,0)
-               font-family: cursive;
-               font-size: 45px;
-               align-content: center;
-               text-align: center;
-               border-style: dashed;
-           }
-           h2 {
-                color: rgb(255, 50, 20);
-               font-family: "American Typewriter";
-               font-size: 30px;
-               align-content: center;
-               text-align: center;
-           }
 
-           h3 { align-content: center;
+<style>
 
-           }
-           body {
-               background-color: rgb(177, 168, 200);
-               font-family: "Adobe Garamond Pro";
-               font-size: 25 px;
-               align-content: center;
-               text-align: center;
-           }
+    body {
 
-       </style>
-        <h1>
-        <p> Abi & Brian </p>
-       </h1>
-        <h2>
-        <p> May 5th, 2018 </p>
-        </h2>
-        <h3>
-        <img src="img/picture_of_us_mom_grad.jpg" width="500">
-        </h3>
-        <body>
-        <p> This is our story...</p>
-        </body>
+        color: rgb(170, 150, 250);
+        background-image: url("img/latest.png");
+        background-repeat: repeat;
+        background-color: rgba(92, 1, 178);
+        font-family: "Adobe Garamond Pro";
+        font-size: 25px;
+        align-content: center;
+        text-align: center;
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+    }
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
+    .dropbtn {
+        background-color: grey;
+        color: white;
+        font-size: 16px;
+        border: solid;
+        cursor: pointer;
+
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ebccd1;
+        mini-width: 160px;
+
+    }
+
+    .dropdown-content a {
+        color: black;
+
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ebccd1;
+
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: palevioletred;
+
+    }
+
+    h1 {
+        color: rgb(150, 20, 100);
+        font-family: "Snell Roundhand";
+        font-size: 52px;
+        align-content: center;
+        text-align: center;
+        border-style: solid;
+
+    }
+
+    h2 {
+        color: rgb(150, 50, 100);
+        font-family: Consolas;
+        font-size: 30px;
+        align-content: center;
+        text-align: center;
+        text-shadow: 2px 2px #761c19;
+
+    }
+
+    h3 {
+        align-content: center;
+        color: rgb(100, 20, 150);
+        /*opacity: 0.6;*/
+        font-size: 18px;
+
+    }
+
+
+</style>
+<h1>
+    <p> Abbi & Brian </p>
+
+    <img src="FestiveBG.jpg" width="100" style="background-repeat: repeat">
+</h1>
+
+<h2>
+    <p> June 16th, 2018 </p>
+</h2>
+
+<h3>
+    <div class="tab">
+        <button class="tablinks" onclick="openPage(event,'Home')">Home</button>
+        <!--<button class="tablinks" onclick="openPage(event, 'About us')">About us</button>-->
+        <button class="tablinks" onclick="openPage(event, 'Photos')">Photos</button>
+
+        <button class="tablinks" onclick="openPage(event, 'Ceremony')">Ceremony</button>
+        <button class="tablinks" onclick="openPage(event, 'Reception')">Reception</button>
+        <button class="tablinks" onclick="openPage(event, 'Travel info')">Travel Info</button>
+        <button class="tablinks" onclick="openPage(event, 'RSVP')">RSVP</button>
+        <button class="tablinks" onclick="openPage(event, 'Registry')">Registry</button>
+        <!--<button class="tablinks" onclick="openPage(event, 'Bridesmaids')">Bridesmaids (and men)</button>-->
+        <!--<button class="tablinks" onclick="openPage(event, 'Groomsmen')">Groomsmen</button>-->
+
+        <div class="dropdown">
+            <button class="dropbtn">Wedding Party</button>
+            <div class="dropdown-content">
+                <button class="tablinks" onclick="openPage(event, 'Bridesmaids')">Bridesmaids (and men)</button>
+                <button class="tablinks" onclick="openPage(event, 'Groomsmen')">Groomsmen</button>
+                <!--<a href="#Bridesmaids (and men)">Bridesmaids and Bridesmen</a>-->
+                <!--<a href="#Groomsmen">Groomsmen</a>-->
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">About us</button>
+            <div class="dropdown-content">
+                <button class="tablinks" onclick="openPage(event, 'About us')">About us</button>
+                <button class="tablinks" onclick="openPage(event, 'Photos')">Photos</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</h3>
+
+<p>
+
+</p>
+
+
+<div id="Home" class="tabcontent">
+
+    <img src="img/holding hands bandi.jpg" width=" 500" style="opacity: 1"
+         style="align-content: center; margin-left: 500px; margin-right: 900px">
+
+</div>
+<div id="About us" class="tabcontent" style="display:none; color: rgb(0, 0, 0); font-size: 18px">
+
+    <p></p>
+    <b> The beginning </b>
+    <p></p>
+
+
+    <b style="color: rgb(0,0,0); font-size:18px"> It was a snowy day in December of 2014 in Burlington, VT.
+        I (Abbi) hauled myself over about a foot of snow with the crisp wind blowing in my face
+        for about 1 mile from my apartment to get to Duine Duende, an American style restaurant.
+        There I met a lanky, tall guy who shyly smiled and introduced himself.
+        We awkwardly made our way to the dinner table and sat down- silent- for about 10 minutes.
+        After the food came out- delicious chicken and waffles might I add-though we talked a little bit more
+        (thankfully haha)
+        and walked out of the restaurant an hour later with smiles on our faces.
+        We hugged with a casual see you again sometime soon (which happened to be 3 weeks later at the movies)
+        and went our separate ways...</b>
+    </p>
+
+
+</div>
+
+<div id="Ceremony" class="tabcontent" style="display:none; color: rgb(255, 250, 240)">
+    <p> Our Ceremony will be held at 3 p.m. at First Parish Congregational Church in Saco, Maine.
+
+        Formal or semi-formal attire requested </p>
+
+    <a href="Important%20info.html">
+        Important Information
+
+    </a>
+</div>
+
+
+<div id="Reception" class="tabcontent" style="display:none; color: rgb(255, 250, 240)">
+    <p> Our reception will be at 5 p.m. at Village by the Sea in Wells, Maine. Dinner will be a buffet menu.
+
+        Please RSVP below and check your preferred meal choice.
+
+    </p>
+
+</div>
+
+<div id="Photos" class="tabcontent" style="display:none">
+    <h3>
+        <img src="img/AD grad .jpg" width="300">
+        <img src="img/breweryfestival .jpg" width="300"></h3>
+</div>
+
+<div id="Registry" class="tabcontent" style="display:none; color: rgb(255, 250, 240)">
+
+    <p> The following links will connect you to all the places we have made a registry
+
+    <div style='vertical-align:middle; text-align:center'><a
+        href='https://www.amazon.com/wedding/abishag-suresh-brian-devins-wells-june-2018/registry/3KR3IUR8E8UVR'
+        target="_blank">
+        <img src="img/amazon_logo_RGB.jpg" ; style="width: 20%; height:20%"></a></div>
+    </p>
+
+    <div style='vertical-align:middle; text-align:center'><a href='https://www.macys.com/wgl/registry/guest/6824087'
+                                                             target="_blank">
+        <img src="img/Macys_Logo.jpg" ; style="width:20%; height: 20%"> </a></div>
+    </p>
+
+    <div style='vertical-align:middle; text-align:center'><a href='http://www.travelersjoy.com/abbiandbrian/'
+                                                             target="_blank">
+        Traveler's Joy Registry </a></div>
+    </p>
+
+    <div style='vertical-align:middle; text-align:center'><a target="_blank"
+                                                             href='https://www.bedbathandbeyond.com:443/store/giftregistry/view_registry_guest.jsp?registryId=545034147&eventType=Wedding&pwsurl= '>
+        <img src="img/Bed_Bath_BeyondLogo.jpg" ; style="width:20%; height: 20%"></a></div>
+    </p>
+
+
+</div>
+
+
+<div id="RSVP" class="tabcontent" style="display:none; color: rgb(255, 250, 240)">
+
+    <p><a href='http://abbibrianwedding.app.rsvpify.com/'> RSVP link </a></p>
+</div>
+
+<div id="Bridesmaids" class="tabcontent" style="display:none; color: rgb(255, 250, 240)">
+
+    <p>
+        Brenda Warman:
+        Caroline Suresh:
+        Andrew Calkins
+        Ignatia Chen
+
+    </p>
+</div>
+
+<div id="Groomsmen" class="tabcontent" style="display:none; color: rgb(255, 250, 240)">
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
+
+
+    function openPage(event, pageName) {
+        // Variables in tabs code
+        var i, tabcontent, tablinks;
+
+        // Hiding tab content until tab is clicked
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Removing the automatic active setting of the class of tab links
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Displaying only the tab that was clicked on
+        document.getElementById(pageName).style.display = "block";
+        event.currentTarget.className += " active";
+    }
+</script>
+
+
+<page>
+
+
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+
+
+    <div style="position:relative;height:0;padding-bottom:56.25%">
+        <iframe src="https://www.youtube.com/embed/eVN4jbXD_6w?ecver=2&autoplay=1"
+                width="100" height="120" frameborder="0" style="position:absolute;width:10%;height:10%" allowfullscreen>
+
+        </iframe>
+    </div>
+
+</page>
+
+<h3>
+
+</h3>
+
+</body>
 </html>
