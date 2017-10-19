@@ -28,11 +28,21 @@
 
     }
 
-    .dropbtn {
-        background-color: grey;
+    div.tab button {
+        background-color: #c7254e;
         color: white;
+        padding: 16px;
         font-size: 16px;
-        border: solid;
+        border: none;
+        cursor: pointer;
+
+    }
+    .dropbtn {
+        background-color: #c7254e;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
         cursor: pointer;
 
     }
@@ -46,12 +56,18 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #ebccd1;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
 
     }
 
     .dropdown-content a {
         color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
 
     }
 
@@ -70,9 +86,39 @@
 
     }
 
+    /*div.tab {*/
+    /*float: left;*/
+    /*border: 1px solid #ccc;*/
+    /*background-color: #ebccd1;*/
+    /*width: 30%;*/
+    /*height: 200px;*/
+    /*}*/
+
+    /*div.tab button {*/
+    /*display: block;*/
+    /*background-color: inherit;*/
+    /*color: black;*/
+    /*padding: 22px 16px;*/
+    /*width: 100%;*/
+    /*border: none;*/
+    /*outline: none;*/
+    /*text-align: left;*/
+    /*cursor: pointer;*/
+    /*transition: 0.3s;*/
+    /*}*/
+
+    /*div.tab button:hover {*/
+    /*background-color: #ddd;*/
+    /*}*/
+
+    /*div.tab button.active {*/
+    /*background-color: #ccc;*/
+    /*}*/
+
+
     h1 {
         color: rgb(150, 20, 100);
-        font-family: "Snell Roundhand", Chalkduster;
+        font-family: "Snell Roundhand", cursive;
         font-size: 52px;
         align-content: center;
         text-align: center;
@@ -82,7 +128,7 @@
 
     h2 {
         color: rgb(150, 50, 100);
-        font-family: Consolas, "Apple Chancery";
+        font-family: Consolas, serif;
         font-size: 30px;
         align-content: center;
         text-align: center;
@@ -99,6 +145,7 @@
     }
 
 
+
 </style>
 
 
@@ -107,50 +154,64 @@
 
 <!-- Add your site or application content here -->
 <h1>
-    Abbi & Brian
+    Abbi Suresh
+
+    &
+
+    Brian Devins
 
 
 </h1>
 
 <h2>
     June 16th, 2018
+    <p>
+    </p>
+
 </h2>
 
 <h3>
+
 
 </h3>
 
 <div class="tab">
     <button class="tablinks" onclick="openPage(event,'Home')">Home</button>
-    <!--<button class="tablinks" onclick="openPage(event, 'About us')">About us</button>-->
-    <button class="tablinks" onclick="openPage(event, 'Photos')">Photos</button>
+    <button class="tablinks" onclick="openPage(event, 'About us')">About us</button>
 
-    <button class="tablinks" onclick="openPage(event, 'Ceremony')">Ceremony</button>
-    <button class="tablinks" onclick="openPage(event, 'Reception')">Reception</button>
-    <button class="tablinks" onclick="openPage(event, 'Travel info')">Travel Info</button>
-    <button class="tablinks" onclick="openPage(event, 'RSVP')">RSVP</button>
-    <button class="tablinks" onclick="openPage(event, 'Registry')">Registry</button>
-    <!--<button class="tablinks" onclick="openPage(event, 'Bridesmaids')">Bridesmaids (and men)</button>-->
-    <!--<button class="tablinks" onclick="openPage(event, 'Groomsmen')">Groomsmen</button>-->
+
+    <div class="dropdown">
+        <button class="dropbtn">Photos</button>
+        <div class="dropdown-content">
+            <button class="tablinks" onclick="openPage(event, 'General')">General Photos</button>
+            <button class="tablinks" onclick="openPage(event, 'Engagement')">Engagement</button>
+        </div>
+
+    </div>
+
 
     <div class="dropdown">
         <button class="dropbtn">Wedding Party</button>
         <div class="dropdown-content">
             <button class="tablinks" onclick="openPage(event, 'Bridesmaids')">Bridesmaids (and men)</button>
             <button class="tablinks" onclick="openPage(event, 'Groomsmen')">Groomsmen</button>
-            <!--<a href="#Bridesmaids (and men)">Bridesmaids and Bridesmen</a>-->
-            <!--<a href="#Groomsmen">Groomsmen</a>-->
+
         </div>
     </div>
 
     <div class="dropdown">
-        <button class="dropbtn">About us</button>
+        <button class="dropbtn">Details</button>
         <div class="dropdown-content">
-            <button class="tablinks" onclick="openPage(event, 'About us')">About us</button>
-            <button class="tablinks" onclick="openPage(event, 'Photos')">Photos</button>
+            <button class="tablinks" onclick="openPage(event, 'Ceremony')">Ceremony</button>
+            <button class="tablinks" onclick="openPage(event, 'Reception')">Reception</button>
+            <button class="tablinks" onclick="openPage(event, 'Travel info')">Travel info</button>
         </div>
 
     </div>
+
+    <button class="tablinks" onclick="openPage(event, 'RSVP')">RSVP</button>
+    <button class="tablinks" onclick="openPage(event, 'Registry')">Registry</button>
+
 
 </div>
 
@@ -172,7 +233,8 @@
     <p></p>
 
 
-    <b style="color: rgb(0,0,0); font-size:18px"> It was a snowy day in December of 2014 in Burlington, VT.
+    <b style="color: rgb(0,0,0);font-family: 'Gill Sans'; font-size:18px; font-weight: normal"> It was a snowy day in
+        December of 2014 in Burlington, VT.
         I (Abbi) hauled myself over about a foot of snow with the crisp wind blowing in my face
         for about 1 mile from my apartment to get to Duine Duende, an American style restaurant.
         There I met a lanky, tall guy who shyly smiled and introduced himself.
@@ -207,11 +269,32 @@
 
 </div>
 
-<div id="Photos" class="tabcontent" style="display:none">
-    <h3>
-        <img src="img/AD grad .jpg" width="300">
-        <img src="img/breweryfestival .jpg" width="300"></h3>
+<div id="General" class="tabcontent" style="display:none">
+
+    <img src="img/AD grad .jpg" width="300">
+    <img src="img/breweryfestival .jpg" width="300">
+
+    <p></p>
+
+    <img src="img/momgrad_bandi.jpg" width="300">
+    <img src="img/running.jpg" width="300">
+    <img src="img/flight.jpg" width="300">
+
+    <p></p>
+
+    <img src="img/chel2bad.jpg" width="300">
+    <img src="img/chelsea_wed_bas.jpg" width="300">
+    <img src="img/xmas.jpg" width="300">
+
+
 </div>
+
+<div id="Engagement" class="tabcontent" style="display:none">
+
+    <img src="img/happy_engagementphoto.jpg" width="300">
+
+</div>
+
 
 <div id="Registry" class="tabcontent" style="display:none; color: rgb(255, 250, 240)">
 
@@ -221,16 +304,19 @@
         href='https://www.amazon.com/wedding/abishag-suresh-brian-devins-wells-june-2018/registry/3KR3IUR8E8UVR'
         target="_blank">
         <img src="img/amazon_logo_RGB.jpg" style="width: 20%; height:20%"></a></div>
+    <p></p>
 
 
     <div style='vertical-align:middle; text-align:center'><a href='https://www.macys.com/wgl/registry/guest/6824087'
                                                              target="_blank">
         <img src="img/Macys_Logo.jpg" style="width:20%; height: 20%"> </a></div>
+    <p></p>
 
 
     <div style='vertical-align:middle; text-align:center'><a href='http://www.travelersjoy.com/abbiandbrian/'
                                                              target="_blank">
         Traveler's Joy Registry </a></div>
+    <p></p>
 
 
     <div style='vertical-align:middle; text-align:center'><a target="_blank"
@@ -243,8 +329,20 @@
 
 <div id="RSVP" class="tabcontent" style="display:none; color: rgb(255, 250, 240)">
 
-    <p><a href='http://abbibrianwedding.app.rsvpify.com/'> RSVP link </a></p>
+    <p><a href='http://abbibrianwedding.app.rsvpify.com/' target="_blank"> RSVP link </a></p>
+
+    <script type="text/javascript" src="http://app.rsvpify.com/embed/500052564"></script>
+    <script type="text/javascript" src="http://app.rsvpify.com/js/iframeResizer.min.js"></script>
+    <script type="text/javascript">
+        iFrameResize({
+            autoResize: true,
+            heightCalculationMethod: 'max',
+            enablePublicMethods: true
+        }, "#RSVPifyIFrame");
+    </script>
+
 </div>
+
 
 <div id="Bridesmaids" class="tabcontent" style="display:none; color: rgb(255, 250, 240)">
 
