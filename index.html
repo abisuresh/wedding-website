@@ -115,6 +115,7 @@
     .tab {
         align-content: center;
         color: rgb(100, 20, 150);
+        font-family: "Gill Sans", serif;
         /*opacity: 0.6;*/
         font-size: 18px;
 
@@ -145,23 +146,28 @@
         /*position: relative;*/
         /*transform: translate(-50%, -50%)*/
         color: rgb(150, 20, 100);
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        width: 100%;
-        margin-left: 215%;
+        align-items: center;
+        width: 25%;
+        margin-right: auto;
+        margin-left: auto;
 
     }
 
     .intro {
-        background: url("img/IntroPage.jpg");
+        background: url("img/IntroPage.jpg") palegoldenrod;
         background-size: cover;
+        height: 100%;
+        color: white;
+        font-family: "Snell Roundhand", cursive;
+        font-size: 42px;
+        font-weight: 600;
+        align-content: center;
+        text-align: center;
+        border-style: none;
 
-    }
-
-    .intro .inner {
-        display: table-cell;
-        vertical-align: top;
-        width: 100%;
-        max-width: none;
     }
 
     .page {
@@ -188,8 +194,7 @@
 <body>
 
 <div class="intro">
-    <div class="inner">
-        <h1>
+
             <div class="boxed">
 
                 Abishag Suresh
@@ -200,9 +205,9 @@
 
             </div>
 
+    <h1>
 
-        </h1>
-    </div>
+    </h1>
 
 
     <h2>
@@ -266,7 +271,7 @@
 </p>
 
 
-    <div id="Home" class="tabcontent page">
+    <div id="Home" class="tabcontent page" style="font-size: x-large">
 
         Welcome to our wedding website!
 
