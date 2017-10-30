@@ -241,16 +241,86 @@
         opacity: 0.7;
     }
 
+    #brewery {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #brewery:hover {
+        opacity: 0.7;
+    }
+
+    #momgrad {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #momgrad:hover {
+        opacity: 0.7;
+    }
+
+    #running {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #running:hover {
+        opacity: 0.7;
+    }
+
+    #flight {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #flight:hover {
+        opacity: 0.7;
+    }
+
+    #wedding {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #wedding:hover {
+        opacity: 0.7;
+    }
+
+    #wedding2 {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #wedding2:hover {
+        opacity: 0.7;
+    }
+
+    #xmas {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #xmas:hover {
+        opacity: 0.7;
+    }
+
     .modal {
         display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
+        position: fixed;
         z-index: 1; /* Sit on top */
         padding-top: 100px; /* Location of the box */
         left: 0;
         top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
+        width: 100%;
+        height: 100%;
+        overflow: auto;
         background-color: rgb(0, 0, 0); /* Fallback color */
         background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
     }
@@ -518,7 +588,6 @@
 
 <div id="General" class="tabcontent" style="display:none">
 
-    <!--<img src="img/AD grad .jpg" width="20%" style="border: solid; color: black">-->
     <img id="grad" src="img/AD%20grad%20.jpg" alt="Allison's graduation" width="20%"
          style="border: solid; color: black">
 
@@ -531,19 +600,25 @@
         <div id="caption"></div>
     </div>
 
-    <img src="img/breweryfestival .jpg" width="20%" style="border: solid; color: black">
+    <img id="brewery" src="img/breweryfestival .jpg" alt="Brewery festival" width="20%"
+         style="border: solid; color: black">
 
     <p></p>
 
-    <img src="img/momgrad_bandi.jpg" width="20%" style="border: solid; color: black">
-    <img src="img/running.jpg" width="20%" style="border: solid; color: black">
-    <img src="img/flight.jpg" width="20%" style="border: solid; color: black">
+    <img id="momgrad" src="img/momgrad_bandi.jpg" alt="Mom's graduation at Dartmouth" width="20%"
+         style="border: solid; color: black">
+    <img id="running" src="img/running.jpg" alt="Covered Bridges Half Marathon 2016" width="20%"
+         style="border: solid; color: black">
+    <img id="flight" src="img/flight.jpg" alt="London & Ireland Trip 2017" width="20%"
+         style="border: solid; color: black">
 
     <p></p>
 
-    <img src="img/chel2bad.jpg" width="20%" style="border: solid; color: black">
-    <img src="img/chelsea_wed_bas.jpg" width="20%" style="border: solid; color: black">
-    <img src="img/xmas.jpg" width="20%" style="border: solid; color: black">
+    <img id="wedding" src="img/chel2bad.jpg" alt="At Chelsea & Sam Steward's wedding" width="20%"
+         style="border: solid; color: black">
+    <img id="wedding2" src="img/chelsea_wed_bas.jpg" alt="At Chelsea & Sam Steward's wedding" width="20%"
+         style="border: solid; color: black">
+    <img id="xmas" src="img/xmas.jpg" alt="Christmas 2016" width="20%" style="border: solid; color: black">
 
 
 </div>
@@ -790,6 +865,7 @@
 
     }
 
+    //Allison's Grad
 
     var modal = document.getElementById('myModal');
 
@@ -801,7 +877,7 @@
         modal.style.display = "block";
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
-    }
+    };
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
@@ -809,14 +885,146 @@
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
-    }
+    };
+
+    //Brewery Festival
+
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('brewery');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    //Mom's Grad
+
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('momgrad');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    //Covered Bridges
+
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('running');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    //Flight picture
+    var img = document.getElementById('flight');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
 
 
-    //    $(document).ready(function(){
-    //        $("div").click(function(){
-    //            $("close").slideUp('slow');
-    //        });
-    //    });
+    //Picture from Chelsea & Sam's wedding
+    var img = document.getElementById('wedding');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    //Picture TWO from Chelsea & Sam's wedding
+    var img = document.getElementById('wedding2');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    //Picture TWO from Chelsea & Sam's wedding
+    var img = document.getElementById('xmas');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
 </script>
 
 
