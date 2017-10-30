@@ -294,7 +294,7 @@
     </div>
 
 
-    <div class="dropdown">
+    <div class="dropdown" id="close">
         <button class="dropbtn">Wedding Party</button>
         <div class="dropdown-content">
             <button class="tablinks" onclick="openPage(event, 'Bridesmaids')">Bridesmaids (and men)</button>
@@ -303,7 +303,7 @@
         </div>
     </div>
 
-    <div class="dropdown">
+    <div class="dropdown" id="close2">
         <button class="dropbtn">Details</button>
         <div class="dropdown-content">
             <button class="tablinks" onclick="openPage(event, 'Ceremony')">Ceremony</button>
@@ -425,8 +425,12 @@
 
     <div id="Reception" class="tabcontent"
          style="background-color: #532C3F; color: #CDCDCD; display:none; font-size: large; width: 55%; text-align: center; margin-left: 22%; margin-right: 22%">
-    <p> Our reception will be at 5 p.m. at Village by the Sea in Wells, Maine. Dinner will be a buffet menu.
+        <p> Our reception will be at 5 p.m. at Village by the Sea in Wells, Maine.
 
+        <p></p>
+        Address: 1373 Post Rd, Wells, ME 04090
+        <p></p>
+        Dinner will be a buffet menu.
         Please RSVP on the tab to the right and check your preferred meal choice.
 
     </p>
@@ -692,7 +696,14 @@
         // Displaying only the tab that was clicked on
         document.getElementById(pageName).style.display = "block";
         event.currentTarget.className += " active";
+
     }
+
+    //    $(document).ready(function(){
+    //        $("div").click(function(){
+    //            $("close").slideUp('slow');
+    //        });
+    //    });
 </script>
 
 
