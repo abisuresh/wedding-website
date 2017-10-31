@@ -311,6 +311,56 @@
         opacity: 0.7;
     }
 
+    #happyeng {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #happyeng:hover {
+        opacity: 0.7;
+    }
+
+    #eyeseng {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #eyeseng:hover {
+        opacity: 0.7;
+    }
+
+    #ringeng {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #ringeng:hover {
+        opacity: 0.7;
+    }
+
+    #bencheng {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #bencheng:hover {
+        opacity: 0.7;
+    }
+
+    #hugeng {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #hugeng:hover {
+        opacity: 0.7;
+    }
+
     .modal {
         display: none; /* Hidden by default */
         position: fixed;
@@ -458,6 +508,7 @@
             <button class="tablinks" onclick="openPage(event, 'Ceremony')">Ceremony</button>
             <button class="tablinks" onclick="openPage(event, 'Reception')">Reception</button>
             <button class="tablinks" onclick="openPage(event, 'Travel info')">Travel info</button>
+            <button class="tablinks" onclick="openPage(event, 'Accommodations')">Accommodations</button>
         </div>
 
     </div>
@@ -587,11 +638,6 @@
 
 </div>
 
-<div id="General" class="tabcontent" style="display:none">
-
-    <img id="grad" src="img/AD%20grad%20.jpg" alt="Allison's graduation" width="20%"
-         style="border: solid; color: black">
-
     <div id="myModal" class="modal">
 
         <span class="close">&times;</span>
@@ -600,6 +646,12 @@
 
         <div id="caption"></div>
     </div>
+
+<div id="General" class="tabcontent" style="display:none">
+
+    <img id="grad" src="img/AD%20grad%20.jpg" alt="Allison's graduation" width="20%"
+         style="border: solid; color: black">
+
 
     <img id="brewery" src="img/breweryfestival .jpg" alt="Brewery festival" width="20%"
          style="border: solid; color: black">
@@ -626,16 +678,27 @@
 
 <div id="Engagement" class="tabcontent" style="display:none">
 
-    <img src="img/happy_engagementphoto.jpg" width="25%" style="border: solid; color: black">
+
+    <img id="happyeng" src="img/happy_engagementphoto.jpg" alt="" width="25%" style="border: solid; color: black">
 
     <p></p>
-    <img src="img/eyes.jpg" width="25%" style="border: solid; color: black">
+
+    <!--<div id="myModal" class="modal">-->
+
+    <!--<span class="close">&times;</span>-->
+
+    <!--<img class="modal-content" id="gen1">-->
+
+    <!--<div id="caption"></div>-->
+    <!--</div>-->
+
+    <img id="eyeseng" src="img/eyes.jpg" alt="" width="25%" style="border: solid; color: black">
 
     <p></p>
 
-    <img src="img/bench.jpg" width="20%" style="border: solid; color: black">
-    <img src="img/ring.jpg" width="20%" style="border: solid; color: black">
-    <img src="img/hug.jpg" width="20%" style="border: solid; color: black">
+    <img id="bencheng" src="img/bench.jpg" alt="" width="20%" style="border: solid; color: black">
+    <img id="ringeng" src="img/ring.jpg" alt="" width="20%" style="border: solid; color: black">
+    <img id="hugeng" src="img/hug.jpg" alt="" width="20%" style="border: solid; color: black">
 
 
 </div>
@@ -836,6 +899,14 @@
 </div>
 
 
+    <div id="Accommodations" class="tabcontent"
+         style="display:none; font-size: large; width: 65%; text-align: center; margin-left: 17%; margin-right: 17%">
+
+
+        Hotel rooms blocked out at Village by the Sea:
+
+    </div>
+
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
@@ -955,6 +1026,9 @@
     };
 
     //Flight picture
+
+    var modal = document.getElementById('myModal');
+
     var img = document.getElementById('flight');
     var modalImg = document.getElementById("gen1");
     var captionText = document.getElementById("caption");
@@ -974,6 +1048,9 @@
 
 
     //Picture from Chelsea & Sam's wedding
+
+    var modal = document.getElementById('myModal');
+
     var img = document.getElementById('wedding');
     var modalImg = document.getElementById("gen1");
     var captionText = document.getElementById("caption");
@@ -992,6 +1069,9 @@
     };
 
     //Picture TWO from Chelsea & Sam's wedding
+
+    var modal = document.getElementById('myModal');
+
     var img = document.getElementById('wedding2');
     var modalImg = document.getElementById("gen1");
     var captionText = document.getElementById("caption");
@@ -1009,8 +1089,112 @@
         modal.style.display = "none";
     };
 
-    //Picture TWO from Chelsea & Sam's wedding
+    //Christmas 2016 picture
+    var modal = document.getElementById('myModal');
+
     var img = document.getElementById('xmas');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    //Happy engagement picture
+    var modal = document.getElementById('myModal');
+
+    var img = document.getElementById('happyeng');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    //Bench engagement picture
+    var modal = document.getElementById('myModal');
+
+    var img = document.getElementById('bencheng');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+
+    //Ring engagement picture
+    var modal = document.getElementById('myModal');
+
+    var img = document.getElementById('ringeng');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+
+    //hug engagement picture
+    var modal = document.getElementById('myModal');
+
+    var img = document.getElementById('hugeng');
+    var modalImg = document.getElementById("gen1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    //eyes engagement picture
+    var modal = document.getElementById('myModal');
+
+    var img = document.getElementById('eyeseng');
     var modalImg = document.getElementById("gen1");
     var captionText = document.getElementById("caption");
     img.onclick = function () {
