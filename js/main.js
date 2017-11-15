@@ -1,3 +1,4 @@
+//Images
 function openPage(event, pageName) {
     // Variables in tabs code
     var i, tabcontent, tablinks;
