@@ -422,7 +422,7 @@
         color: #33032B;
         font-family: 'Gill Sans', cursive;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
-        white-space: nowrap; /* Keeps the content on a single line */
+        white-space: normal;
         margin: 0 auto; /* Gives that scrolling effect as the typing happens */
         letter-spacing: .1em;
         animation: typing 5s steps(30, end),
@@ -449,10 +449,176 @@
         }
     }
 
-    /*.nav-tabs {*/
+    /*#nav*/
+    /*{*/
+    /*width: 60em; !* 1000 *!*/
+    /*font-family: 'Gill Sans', sans-serif;*/
+    /*font-size: 18px;*/
+    /*font-weight: 400;*/
+    /*position: absolute;*/
+    /*top: 25%;*/
+    /*align-content: center;*/
+    /*margin-left: 10%;*/
+    /*margin-right: 10%;*/
 
     /*}*/
 
+    /*#nav > a*/
+    /*{*/
+    /*display: none;*/
+    /*}*/
+
+    /*#nav li*/
+    /*{*/
+    /*position: relative;*/
+    /*}*/
+    /*#nav li a*/
+    /*{*/
+    /*color: #fff;*/
+    /*display: block;*/
+    /*}*/
+    /*#nav li a:active*/
+    /*{*/
+    /*background-color: #532C3F;*/
+    /*}*/
+
+    /*#nav span:after*/
+    /*{*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*border: 2px solid transparent; !* 5 *!*/
+    /*border-bottom: none;*/
+    /*border-top-color: rgb(170, 150, 250);*/
+    /*vertical-align: middle;*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+    /*}*/
+
+    /*!* first level *!*/
+
+    /*#nav > ul*/
+    /*{*/
+    /*height: 3.75em; !* 60 *!*/
+    /*background-color: #33032B;*/
+    /*}*/
+    /*#nav > ul > li*/
+    /*{*/
+    /*width: 15%;*/
+    /*height: 100%;*/
+    /*float: left;*/
+    /*}*/
+    /*#nav > ul > li > a*/
+    /*{*/
+    /*height: 100%;*/
+    /*font-size: 1.5em; !* 24 *!*/
+    /*line-height: 2.5em; !* 60 (24) *!*/
+    /*text-align: center;*/
+    /*}*/
+    /**/
+    /*#nav > ul > li:hover > a,*/
+    /*#nav > ul:not( :hover ) > li.active > a*/
+    /*{*/
+    /*background-color: #33032B;*/
+    /*}*/
+
+    /*!* second level *!*/
+
+    /*#nav li ul*/
+    /*{*/
+    /*background-color: #33032B;*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*top: 100%;*/
+    /*}*/
+    /*#nav li:hover ul*/
+    /*{*/
+    /*display: block;*/
+    /*left: 0;*/
+    /*background-color: #33032B;*/
+
+    /*}*/
+    /**!*/
+    /*#nav li ul a*/
+    /*{*/
+    /*font-size: 1.25em; !* 20 *!*/
+    /*padding: 0.75em; !* 15 (20) *!*/
+    /*}*/
+    /*#nav li ul li a:hover,*/
+    /*#nav li ul:not( :hover ) li.active a*/
+    /*{*/
+    /*right: 0;*/
+    /*background-color: #532C3F;*/
+    /*}*/
+
+    /*@media only screen and ( max-width: 80em )*/
+    /*{*/
+    /*#nav*/
+    /*{*/
+    /*width: 100%;*/
+    /*position: static;*/
+    /*margin: 0;*/
+    /*}*/
+    /*}*/
+
+    /*@media only screen and ( max-width: 40em ) !* 640 *!*/
+    /*{*/
+    /*html*/
+    /*{*/
+    /*font-size: 18px;*/
+    /*}*/
+
+    /*#nav*/
+    /*{*/
+    /*position: relative;*/
+    /*top: auto;*/
+    /*left: auto;*/
+    /*}*/
+    /*#nav > a*/
+    /*{*/
+    /*width: 3.125em; !* 50 *!*/
+    /*height: 3.125em; !* 50 *!*/
+    /*text-align: center;*/
+    /*background-color: #33032B;*/
+    /*position: relative;*/
+    /*}*/
+    /*#nav > a:before,*/
+    /*#nav > a:after*/
+    /*{*/
+    /*position: absolute;*/
+    /*top: 35%;*/
+    /*}*/
+    /*#nav > a:after*/
+    /*{*/
+    /*top: 60%;*/
+    /*}*/
+
+    /*#nav > ul*/
+    /*{*/
+    /*height: auto;*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*}*/
+    /*#nav:target > ul*/
+    /*{*/
+    /*display: block;*/
+    /*}*/
+    /*#nav > ul > li*/
+    /*{*/
+    /*width: 100%;*/
+    /*float: none;*/
+    /*}*/
+    /*#nav > ul > li > a*/
+    /*{*/
+    /*height: auto;*/
+    /*text-align: left;*/
+    /*padding: 0 0.833em; !* 20 (24) *!*/
+    /*}*/
+
+    /*}*/
+
+    /*}*/
 </style>
 
 
@@ -519,14 +685,12 @@
     <div class="dropdown" id="close2">
         <button class="dropbtn">Details</button>
         <div class="dropdown-content">
-            <div class="container">
                 <button class="tablinks" onclick="openPage(event, 'Ceremony')">Ceremony</button>
-                </li>
                 <button class="tablinks" onclick="openPage(event, 'Reception')">Reception</button>
                 <button class="tablinks" onclick="openPage(event, 'Travel info')">Travel info</button>
                 <button class="tablinks" onclick="openPage(event, 'Accommodations')">Accommodations</button>
                 <button class="tablinks" onclick="openPage(event, 'Sightseeing')">Sightseeing</button>
-            </div>
+
         </div>
 
     </div>
@@ -537,25 +701,51 @@
 
 </div>
 
-    <!--<ul class="nav nav-tabs" id="close">-->
-    <!--<li class="active"><a href="#">Home</a></li>-->
-    <!--<li class="dropdown">-->
-    <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1-->
-    <!--<span class="caret"></span></a>-->
-    <!--<ul class="dropdown-menu">-->
-    <!--<li><a href="#">Submenu 1-1</a></li>-->
-    <!--<li><a href="#">Submenu 1-2</a></li>-->
-    <!--<li><a href="#">Submenu 1-3</a></li>-->
+
+    <!--<nav id="nav" role="navigation">-->
+    <!--<a href="#nav" title="Show navigation">Show tabs</a>-->
+    <!--<a href="#" title="Hide navigation">Hide tabs</a>-->
+    <!--<ul>-->
+    <!--<li><a href="#home2">Home</a></li>-->
+    <!--<li><a href="#about">About us</a></li>-->
+    <!--<li>-->
+    <!--<a href="/" aria-haspopup="true">Photos</a>-->
+    <!--<ul class="list-inline">-->
+    <!--<li><a href="/">General Photos</a></li>-->
+    <!--<li><a href="/">Engagment Photos</a></li>-->
+
     <!--</ul>-->
     <!--</li>-->
-    <!--<li><a href="#">Menu 2</a></li>-->
-    <!--<li><a href="#">Menu 3</a></li>-->
+    <!--<li>-->
+    <!--<a href="/" aria-haspopup="true">Details</a>-->
+    <!--<ul>-->
+    <!--<li><a href="/">Ceremony</a></li>-->
+    <!--<li><a href="/">Reception</a></li>-->
+    <!--<li><a href="/">Travel info</a></li>-->
+    <!--<li><a href="/">Accommodations</a></li>-->
+    <!--<li><a href="/">Sightseeing</a></li>-->
     <!--</ul>-->
+    <!--</li>-->
+
+    <!--<li>-->
+    <!--<a href="/" aria-haspopup="true">Wedding Party</a>-->
+    <!--<ul>-->
+    <!--<li><a href="/">Bridesmaids & Bridesman</a></li>-->
+    <!--<li><a href="/">Groomsmen</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li><a href="/">RSVP</a></li>-->
+    <!--<li><a href="/">Registry</a></li>-->
+    <!--</ul>-->
+    <!--</nav>-->
+
 
     <p>
 
 </p>
 
+    <div id="home2">
+    </div>
 
     <div id="Home" class="tabcontent page" style="font-size: x-large; color:#33032B">
 

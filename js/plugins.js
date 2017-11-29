@@ -26,12 +26,14 @@
 
 // $('#dropdown').tabCollapse();
 
-jQuery(document).ready(function ($) {
-    if (document.documentElement.clientWidth < 767) {
-        $('#dropdown').click(function (e) {
-            e.preventDefault();
-        }
+// jQuery(document).ready(function ($) {
+//     if (document.documentElement.clientWidth < 767) {
+//         $('#dropdown').click(function (e) {
+//             e.preventDefault();
+//         }
+//
+//         $(".collapse").collapse();
+//     }
+// });
 
-        $(".collapse").collapse();
-    }
-});
+$('#nav li:has(ul)').doubleTapToGo();
