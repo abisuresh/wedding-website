@@ -23,3 +23,15 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+// $('#dropdown').tabCollapse();
+
+jQuery(document).ready(function ($) {
+    if (document.documentElement.clientWidth < 767) {
+        $('#dropdown').click(function (e) {
+            e.preventDefault();
+        }
+
+        $(".collapse").collapse();
+    }
+});
