@@ -36,4 +36,4 @@
 //     }
 // });
 
-$('#nav li:has(ul)').doubleTapToGo();
+// $('#nav li:has(ul)').doubleTapToGo();
