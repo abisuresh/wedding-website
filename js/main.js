@@ -1,3 +1,15 @@
+//closing tab upon click elsewhere
+
+$(document).click(function () {
+    $("#dropdown-content").hide();
+});
+
+/* Clicks within the dropdown won't make
+ it past the dropdown itself */
+$("#dropdown-content").click(function (e) {
+    e.stopPropagation();
+});
+
 //Images
 function openPage(event, pageName) {
     // Variables in tabs code
