@@ -10,6 +10,11 @@
 //     e.stopPropagation();
 // });
 
+$('.dropbtn').click(function (e) {
+    e.preventDefault();
+    $(this).parent().toggleClass('tap');
+});
+
 //Images
 function openPage(event, pageName) {
     // Variables in tabs code
