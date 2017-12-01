@@ -37,3 +37,12 @@
 // });
 
 // $('#nav li:has(ul)').doubleTapToGo();
+
+$(document).click(function (event) {
+    if (!$(event.target).closest('#tablinks').length) {
+        if ($('#tablinks').is(":visible")) {
+            $('#tablinks').hide();
+        }
+    }
+
+});
