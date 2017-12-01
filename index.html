@@ -418,12 +418,22 @@
         }
     }
 
-    @media screen and (max-width: 780px) { {
-        display: inline-flex;
-        position: relative;
+    @media screen and (max-width: 780px) {
+
+        .dropdown {
+            display: none;
+            position: static;
+        }
+
+        .tablinks {
+            margin-bottom: 1px;
+        }
+
+        .dropdown .tablinks .dropdown-content .dropbtn a {
+            width: 100%;
+        }
     }
 
-    }
 
     /* another try to fix responsive design
 
