@@ -23,7 +23,7 @@
 }());
 
 
-$(document).on("click event", function (event) {
+$(document).on('touchstart', function (event) {
     if (!$(event.target).closest('#dropdown').length) {
         if ($('#dropdown-content').is(":visible")) {
             $('#dropdown').hide();
@@ -31,6 +31,49 @@ $(document).on("click event", function (event) {
     }
 
 });
+
+// $(function() {
+//     var touched = false,
+//         previous_touched;
+//
+//     function updatePreviousTouched(e){
+//         if(typeof previous_touched !== 'undefined' && previous_touched !== null && !previous_touched.is($(e.target))){
+//             previous_touched.data('clicked_once', false);
+//         }
+//
+//         previous_touched = $(e.target);
+//     }
+//
+//     $(".dropdown").on({
+//         touchstart:function(e) {
+//             touched=true;
+//         },
+//         click:function(e);
+//     var $this = $(this);
+//
+//     updatePreviousTouched(e);
+//
+//     if(touched) {
+//         if ($this.data('clicked_once')) {
+//             $this.data('clicked_once', false);
+//             return true;
+//         } else {
+//             e.preventDefault();
+//             $this.trigger("mouseenter").data('clicked_once', true);
+//         }
+//     }
+//
+//     touched = false;
+// }
+// },'.dropdown .has_children');
+//
+// $("html").on({
+//     touchstart:function(e){
+//         touched=false;
+//     },
+//     click:updatePreviousTouched
+// });
+// });
 
 // Place any jQuery/helper plugins in here.
 
