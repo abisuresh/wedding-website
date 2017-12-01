@@ -23,14 +23,14 @@
 }());
 
 
-// $(document).on('click touch', function (event) {
-//     if (!$(event.target).closest('#dropdown').length) {
-//         if ($('#dropdown').is(":visible")) {
-//             $('#dropdown').hide();
-//         }
-//     }
-//
-// });
+$(document).on("click event", function (event) {
+    if (!$(event.target).closest('#dropdown').length) {
+        if ($('#dropdown-content').is(":visible")) {
+            $('#dropdown').hide();
+        }
+    }
+
+});
 
 // Place any jQuery/helper plugins in here.
 
