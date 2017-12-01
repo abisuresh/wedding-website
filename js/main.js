@@ -10,7 +10,7 @@
 //     e.stopPropagation();
 // });
 
-$('.dropbtn').click(function (e) {
+$('.dropdown').click(function (e) {
     e.preventDefault();
     $(this).parent().toggleClass('tap');
 });
