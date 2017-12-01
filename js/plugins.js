@@ -22,6 +22,16 @@
     }
 }());
 
+
+// $(document).on('click touch', function (event) {
+//     if (!$(event.target).closest('#dropdown').length) {
+//         if ($('#dropdown').is(":visible")) {
+//             $('#dropdown').hide();
+//         }
+//     }
+//
+// });
+
 // Place any jQuery/helper plugins in here.
 
 // $('#dropdown').tabCollapse();
@@ -37,12 +47,3 @@
 // });
 
 // $('#nav li:has(ul)').doubleTapToGo();
-
-$(document).click(function (event) {
-    if (!$(event.target).closest('#tablinks').length) {
-        if ($('#tablinks').is(":visible")) {
-            $('#tablinks').hide();
-        }
-    }
-
-});
