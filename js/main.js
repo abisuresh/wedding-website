@@ -1,17 +1,4 @@
-// //closing tab upon click elsewhere
-//
-// $(document).click(function () {
-//     $("#dropdown-content").hide();
-// });
-//
-// /* Clicks within the dropdown won't make
-//  it past the dropdown itself */
-// $("#dropdown-content").click(function (e) {
-//     e.stopPropagation();
-// });
-
-
-//Images
+//Displaying and keeping appropriate tab content open
 function openPage(event, pageName) {
     // Variables in tabs code
     var i, tabcontent, tablinks;
@@ -33,6 +20,8 @@ function openPage(event, pageName) {
     event.currentTarget.className += " active";
 
 }
+
+//Creating modals for images to allow for popup displays with title underneath photo
 
 //Allison's Grad-1
 
