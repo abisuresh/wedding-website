@@ -1,26 +1,3 @@
-// Avoiding console errors in browsers that lack a console.
-(function() {
-    var method;
-    var noco = function () {
-    };
-    var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
-
-    while (length--) {
-        method = methods[length];
-
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noco;
-        }
-    }
-}());
 
 //Closing dropdown menu on touch elsewhere on a touchscreen device
 
