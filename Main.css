@@ -19,6 +19,7 @@ div.tab button {
     cursor: pointer;
 
 }
+
 .dropbtn {
     background-color: #33032B;
     color: #F0EADF;
@@ -110,6 +111,15 @@ h2 {
         height: 25%;
         column-gap: 40px;
     }
+}
+
+@media (max-width: 900px) {
+    .column {
+        padding-left: 3%;
+        padding-right: 3%;
+
+    }
+
 }
 
 .banner {
